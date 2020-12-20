@@ -45,7 +45,7 @@ my %oid2attr = (
 sub new {
 	my ( $class , %args ) = @_;
 
-	if ( not defined ( $parser ) ) {
+	if ( !defined ( $parser ) || $parser->error ) {
 		$parser = _init();
 	}
 

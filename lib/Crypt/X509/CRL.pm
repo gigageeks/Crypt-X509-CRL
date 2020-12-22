@@ -808,7 +808,7 @@ ASN1
 
 __DATA__
 
-=head1 Crypt-X509::CRL version 0.1
+=head1 Crypt-X509::CRL version 0.2
 F<===========================>
 
 Crypt::X509::CRL is an object oriented X.509 certificate revocation list
@@ -1254,11 +1254,11 @@ by Mike Jackson and Alexander Jung.
 
 =head1 AUTHOR
 
-Duncan Segrest <CPAN@GigaGeek.info> ,
+Duncan Segrest <cpan@gigageek.us> ,
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2007 by Duncan Segrest <CPAN@GigaGeek.info>.
+Copyright (c) 2007 by Duncan Segrest <cpan@gigageek.us>.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.8 or,

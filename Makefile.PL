@@ -5,7 +5,7 @@ use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
     NAME             => 'Crypt::X509::CRL',
-    AUTHOR           => q{Duncan Segrest <cpan@gigageek.us>},
+    AUTHOR           => q{Duncan Segrest},
     VERSION_FROM     => 'lib/Crypt/X509/CRL.pm',
     ABSTRACT_FROM    => 'lib/Crypt/X509/CRL.pm',
     LICENSE          => 'artistic_2',

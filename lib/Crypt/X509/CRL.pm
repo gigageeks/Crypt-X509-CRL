@@ -500,9 +500,18 @@ sub _IDP_rdn {
 # revocation_list
 sub revocation_list {
     my $self = shift;
-    my @crl_reason = qw(unspecified keyCompromise cACompromise affiliationChanged superseded
-    			cessationOfOperation certificateHold removeFromCRL privilegeWithdrawn
-    			aACompromise);
+    my %crl_reason = (
+            0  => 'unspecified',
+            1  => 'keyCompromise',
+            2  => 'cACompromise',
+            3  => 'affiliationChanged',
+            4  => 'superseded',
+            5  => 'cessationOfOperation',
+            6  => 'certificateHold',
+            8  => 'removeFromCRL',
+            9  => 'privilegeWithdrawn',
+            10 => 'aACompromise',
+            );
     my %hold_codes = (
 	    '1.2.840.10040.2.1' => 'holdinstruction-none',
 	    '1.2.840.10040.2.2' => 'holdinstruction-callissuer',
@@ -542,7 +551,7 @@ sub revocation_list {
                     return undef;
                 }
                 $self->{'tbsCertList'}{'rl'}{ $rl->{'userCertificate'} }{'crlReason'} =
-                                                        $crl_reason[ $reason ];
+                                                        $crl_reason{ $reason };
 
             } elsif ( $extension->{'extnID'} eq '2.5.29.24' ) { # OID for invalidityDate
                 my $parser = _init('invalidityDate');
